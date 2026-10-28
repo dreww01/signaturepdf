@@ -1,0 +1,6 @@
+services:
+  signaturepdf:
+    build: .
+    image: signaturepdf-local:dev
+    ports:
+      - "8080:80"

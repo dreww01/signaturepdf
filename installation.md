@@ -70,6 +70,20 @@ sudo service apache2 restart
 
 ## [Deploy with Docker](#docker)
 
+### Running locally with OrbStack
+
+Start the application through OrbStack:
+
+```bash
+make orbstack-up
+```
+
+Open [localhost:8080](http://localhost:8080). Stop it with:
+
+```bash
+make orbstack-down
+```
+
 ### Running a container
 
 ```bash

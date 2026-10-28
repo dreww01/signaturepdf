@@ -1,4 +1,4 @@
-.PHONY: test all
+.PHONY: test all orbstack-up orbstack-down
 
 .DEFAULT_GOAL := all
 
@@ -26,6 +26,12 @@ node_modules/puppeteer:
 
 test: node_modules/jest/bin/jest.js node_modules/puppeteer
 	./node_modules/jest/bin/jest.js
+
+orbstack-up:
+	docker --context orbstack compose up --build -d
+
+orbstack-down:
+	docker --context orbstack compose down
 
 update_trad:
 	# Extraction des phrases traductibles...
